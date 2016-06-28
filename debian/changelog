@@ -1,3 +1,67 @@
+opencv (2.4.9.1+dfsg-2blankon1) tambora; urgency=medium
+
+  * Build for pidgin 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 28 Jun 2016 11:04:51 +0700
+
+opencv (2.4.9.1+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+  * Use HTTPS in Vcs-* fields.
+  * Disable opengl when building in armhf (in Ubuntu only)
+  * Don't build with jasper.  Closes: #818207
+    This causes libopencv-highgui to lose symbols, so we need to rename the
+    package and do a transition.
+  * Fix typo in README.Debian.
+  * Remove unused lintian override python-script-but-no-python-dep.
+  * Add missing dependency on libopencv-gpu2.4v5 to libopencv-gpu-dev.
+    Closes: #825583
+
+ -- Mattia Rizzolo <mattia@debian.org>  Mon, 27 Jun 2016 05:08:42 +0000
+
+opencv (2.4.9.1+dfsg-1.5) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Do not use precompiled headers (Closes: #818450)
+
+ -- Tobias Frost <tobi@debian.org>  Thu, 07 Apr 2016 16:43:31 +0200
+
+opencv (2.4.9.1+dfsg-1.4) unstable; urgency=medium
+
+  * Non-maintainer upload.
+
+  [ Andreas Cadhalpun ]
+  * Fix build with ffmpeg 3.0. (Closes: #803847)
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 06 Mar 2016 23:57:30 +0100
+
+opencv (2.4.9.1+dfsg-1.3) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * Refresh debian/patches:
+    - Update change_type_from_int_to_Atomic_word to fix
+      FTBFS on sparc64. (Closes: #714923)
+    - Re-add fix_without_sysctl.patch to fix FTBFS on x32. (Closes: #792264)
+
+ -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Mon, 08 Feb 2016 10:51:45 +0100
+
+opencv (2.4.9.1+dfsg-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename library packages for g++5 ABI transition.
+    Patch provided by Matthias Klose. (Closes: #791226)
+  * Remove Lintian overrides from Matthias' patch, current Lintian accepts
+    v5 package names as-is.
+  * Build-depend on the version of openexr that started its transition.
+  * Add patch to stop checking the version of sphinx-build (which makes
+    no difference anyway), fixing arch-indep build (#792715; not closing
+    that bug here because it is unclear whether it is considered to be a
+    sphinx bug).
+  * Deliberately not addressing #794856 in this upload, since it requires
+    repacking the orig.tar and is not a regression.
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 19 Aug 2015 22:36:43 +0100
+
 opencv (2.4.9.1+dfsg-1.1+b2blankon1) tambora; urgency=medium
 
   * Rebuild 
@@ -10,6 +74,7 @@ opencv (2.4.9.1+dfsg-1.1+b1blankon1) tambora; urgency=medium
 
  -- Mahyuddin <yudi.al@gmail.com>  Sat, 22 Aug 2015 15:00:48 +0700
 
+opencv (2.4.9.1+dfsg-1.1) unstable; urgency=medium
 opencv (2.4.9.1+dfsg-1.1) unstable; urgency=medium
 
   * Non-maintainer upload.
